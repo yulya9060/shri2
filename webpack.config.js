@@ -10,6 +10,8 @@ const webpack = require('webpack');
 const uglifyJS = require('./webpack/js.uglify');
 const favicon = require('./webpack/favicon');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const PATHS = {
     source: path.join(__dirname,'source'),
     build: path.join(__dirname,'build')
@@ -40,6 +42,12 @@ const common = merge([
             name: "common"
         }),
         new CleanWebpackPlugin(PATHS.build),
+        new OptimizeCssAssetsWebpackPlugin({
+            cssProcessorOptions: { discardComments: { removeAll: true } },
+        }),
+        new StyleLintPlugin({
+            configFile: './.stylelintrc'
+        })
     ],
     },
     images(),
