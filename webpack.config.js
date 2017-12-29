@@ -3,9 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
+const images = require('./webpack/images');
+const fonts = require('./webpack/fonts');
 const extractCSS = require('./webpack/css.extract');
 const webpack = require('webpack');
-const images = require('./webpack/images');
 const uglifyJS = require('./webpack/js.uglify');
 const favicon = require('./webpack/favicon');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -41,7 +42,8 @@ const common = merge([
         new CleanWebpackPlugin(PATHS.build),
     ],
     },
-    images()
+    images(),
+    fonts()
    ]);
    
 module.exports = function(env) {
