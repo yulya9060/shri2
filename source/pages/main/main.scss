@@ -191,7 +191,7 @@ a {
             }
         }
         &__count {
-            font-family:  HelveticaNeue ,Arial,sans-serif;
+            font-family:  HelveticaNeue,Helvetica ,Arial,sans-serif;
             font-size: 13px;
             color: #000000;
             line-height: 17px;
@@ -211,3 +211,65 @@ a {
             }
         }
     }
+
+    // filter-input
+.input-control {
+    background: #FFFFFF;
+    border: none;
+    padding: 11px 0 10px 12px;
+    outline: none;
+    width: 95%;
+    font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0.55px;
+
+    &__label{
+        font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
+        font-size: 13px;
+        color: #000000;
+        letter-spacing: 0;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+}
+    // end filter-input
+
+.display-row{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-box{
+    position: relative;
+    padding-right: 17px;
+    width: 400px;
+    box-sizing: border-box;
+    border: 2px solid #E9ECEF;
+    border-radius: 4px;
+    outline: none;
+
+    &:hover{
+        border: 2px solid #007DFF;
+    }
+
+    &__span {
+        display: none;
+        right: 6px;
+        position: absolute;
+        top: 11px;
+        cursor: pointer;
+
+        &_visibility{
+            display: inline-flex;
+                }
+    }
+
+    &__img{
+        fill:#afb4b8;
+        width: 16px;
+        height: 16px;
+    }
+
+}
