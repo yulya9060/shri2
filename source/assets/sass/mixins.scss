@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+
+@mixin dotted($width,$background) {
+    content: " ";
+    display: inline-block;
+    width: $width;
+    height: $width;
+    background: $background;
+    border-radius: 50%;
+    margin: 4px 7px 4px 7px;
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+  

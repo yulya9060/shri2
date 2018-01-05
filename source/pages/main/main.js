@@ -12,9 +12,8 @@ var spanArrow = document.querySelectorAll('.input-arrow');
 var userInput = document.querySelectorAll('.input-list');
 
 
-
+//текстовое поле с выпадающим списком
 userInput = Array.prototype.slice.call(userInput);
-
 userInput.forEach(function(user){
     user.addEventListener('input',function(){
         this.parentNode.querySelector('.input-arrow').classList.add('input-arrow_visibility');
@@ -52,7 +51,7 @@ for (var i=0;i<users.length; i++)
 
 
 
-
+//текстовое поле с крестиком
 Array.prototype.filter.call(spansClear,function(spanClear){
     spanClear.addEventListener('click',function(event){
         console.log(spanClear);
