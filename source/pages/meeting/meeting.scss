@@ -41,12 +41,14 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        margin-top: 18px;
 
         &__left{
             width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            padding-right: 17px;
         }
         &__right{
             width: 50%;
@@ -61,7 +63,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 32px;
         
     &__title{
     font-family:  HelveticaNeue,Helvetica ,Arial,sans-serif;
@@ -73,13 +75,15 @@
 
 }
 .close-icon{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background: #E9ECEF;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 4px;
+    margin-top: 2px;
 
     &:hover{
         cursor: pointer;
@@ -102,7 +106,12 @@
     display: inline-flex;
     flex-direction: column;
     position: relative;
-    width: 95%;
+    width: 100%;
+    margin-bottom: 23px;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
 
     &_users{
         display: flex;
@@ -120,7 +129,7 @@
         color: #000000;
         letter-spacing: 0;
         position: absolute;
-        top: 60px;
+        top: 59px;
         left: 0;
         width: 100%;
         z-index: 200;
@@ -150,7 +159,7 @@
   // filter-input
   .input-control {
     background: #FFFFFF;
-    padding: 11px 20px 10px 12px;
+    padding: 11px 20px 10px 9px;
     outline: none;
     width: 100%;
     font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
@@ -180,7 +189,6 @@
     color: #000000;
     letter-spacing: 0;
     font-weight: 700;
-    margin-bottom: 4px;
 }
 
 .input-clear{
@@ -244,7 +252,7 @@
 
     .input-list{
         background: #FFFFFF;
-        padding: 11px 20px 10px 12px;
+        padding: 11px 20px 10px 8px;
         outline: none;
         width: 100%;
         font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
