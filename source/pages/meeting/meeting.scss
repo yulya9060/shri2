@@ -41,7 +41,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-top: 18px;
+        margin-top: 16px;
 
         &__left{
             width: 50%;
@@ -49,13 +49,16 @@
             flex-direction: column;
             align-items: flex-start;
             padding-right: 17px;
+
         }
         &__right{
             width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            padding-left: 13px;
         }
+
     }
 
 
@@ -101,23 +104,34 @@
 }
 
 
+.content-form__input{
+    width: 100%;
+
+    & > .display-column{
+        margin-bottom: 23px;
+        margin-top: 0;
+
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+    }
+}
 
 .display-column{
     display: inline-flex;
     flex-direction: column;
     position: relative;
     width: 100%;
-    margin-bottom: 23px;
-
-    &:last-of-type{
-        margin-bottom: 0;
-    }
-
-    &_users{
+    align-items: flex-start;
+    
+    
+    &__users{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: flex-start;
+        margin-top: 4px;
     }
     
     &__list{
@@ -159,7 +173,7 @@
   // filter-input
   .input-control {
     background: #FFFFFF;
-    padding: 11px 20px 10px 9px;
+    padding: 9px 20px 10px 8px;
     outline: none;
     width: 100%;
     font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
@@ -309,6 +323,10 @@
             display: inline-flex;
             flex-direction: row;
             align-items: center;
+            margin-top: 7px;
+            margin-right: 6px;
+            margin-left: 1px;
+            margin-bottom: 1px;
         
             &__title{
                 font-family:   HelveticaNeue,Helvetica ,Arial,sans-serif;
@@ -316,7 +334,7 @@
                 color: #000000;
                 letter-spacing: 0;
                 line-height: 17px;
-                margin-right: 7px;
+                margin-right: 13px;
         
                 &_search{
                     font-weight: 700;
@@ -327,7 +345,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-right: 5px;
+                margin-right: 9px;
         
                 &:hover{
                     .block-user__img{
@@ -350,7 +368,7 @@
         
 .input-date{
     background: #FFFFFF;
-    padding: 11px 20px 10px 12px;
+    padding: 11px 15px 10px 12px;
     outline: none;
     width: 100%;
     font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
@@ -375,17 +393,62 @@
     }
 }
 
+.input-time{
+    background: #FFFFFF;
+    padding: 11px 15px 10px 12px;
+    outline: none;
+    width: 100%;
+    font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.55px;
+    border: 2px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 40px;
+
+    &:focus{
+        border: 2px solid #007DFF;
+    }
+
+    &:hover{
+        border: 2px solid #007DFF;
+    }
+
+    &:active{
+        border: 2px solid #007DFF;
+    }
+}
 .display-row{
     display: flex;
-    width: 95%;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 24px;
 }
 
+.block-time{
+    display: flex;
+}
 .block-input{
     display: flex;
     flex-direction: column;
-    padding-right: 10px;
+    width: 72px;
+    margin-right: 23px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+
 }
+
+.block-date{
+    display: flex;
+    flex-direction: column;
+    width: 237px;
+    margin-right: 17px;
+}
+
 
 .meeting-room{
     font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
@@ -394,14 +457,14 @@
     justify-content: flex-start;
     padding: 10px;
     align-items: center;
-    font-size: 15px;
+    font-size: 13px;
     color: #000000;
     letter-spacing: 0;
     line-height: 17px;
     background: #E9ECEF;
     border-radius: 4px;
     position: relative;
-    margin: 10px 0;
+    margin-bottom: 9px;
 
     &__span{
         right: 6px;
@@ -421,7 +484,7 @@
 
     &__time{
         font-weight: 700;
-        margin-right: 15px;
+        margin-right: 17px;
     }
 
     &__title{
@@ -469,6 +532,7 @@ color: #000000;
 letter-spacing: 0;
 font-family: HelveticaNeue,Helvetica ,Arial,sans-serif;
 font-weight: 700;
+margin-bottom: 2px;
 }
 
 .link {
@@ -528,9 +592,10 @@ font-weight: 700;
     width: 100%;
     justify-content: center;
     display: flex;
-}
-
-.footer-container{
+        
+    &-container{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    }
 }
