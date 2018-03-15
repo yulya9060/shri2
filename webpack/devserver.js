@@ -3,7 +3,8 @@ module.exports = function() {
         devServer: {
             contentBase: '/build',
             compress: true,
-            stats: 'errors-only'
+            stats: 'errors-only',
+            port: 8081
             
            }
     };
